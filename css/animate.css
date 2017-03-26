@@ -1,0 +1,20 @@
+.nav-fixed {
+	position:fixed;
+	padding: 5px 0;
+	top: 0;
+	left: 0;
+	right: 0; 
+	z-index: 200; 
+	background: #2c3039;
+	animation-name: headerAnimate;
+	animation-duration: 0.5s;
+}
+
+@keyframes headerAnimate {
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}

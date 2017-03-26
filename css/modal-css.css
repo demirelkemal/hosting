@@ -1,0 +1,66 @@
+/* 14. Modals
+===========================*/
+
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    display: none;
+}
+
+.modal {
+    width: 300px;
+    padding: 20px;
+
+    background: #fff;
+    text-align: center;
+
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    z-index: 1000;
+    margin-left: -150px;
+
+    animation-name: animateModalClose;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    display: none;
+}
+
+.modal-show{
+    display: block;
+    animation-name: animateModal;
+    animation-duration: 0.5s;
+}
+
+
+@keyframes animateModal{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animateModalClose{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+}
